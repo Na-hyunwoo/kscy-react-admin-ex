@@ -8,7 +8,7 @@ import Dashboard from './Dashboard';
 import authProvider from "./authProvider";
 import dataProvider from "./dataProvider";
 
-
+// 커밋 설정이 잘 된건가 모르겠네요 ?
 const App=()=>(
     <Admin dashboard={Dashboard} authProvider={authProvider} dataProvider={dataProvider}>
         <Resource name="posts" list={PostList} edit={PostEdit} create={PostCreate} icon={PostIcon}/>
