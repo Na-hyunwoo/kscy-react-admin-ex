@@ -6,9 +6,11 @@ import PostIcon from '@material-ui/icons/Book';
 import UserIcon from '@material-ui/icons/Group';
 import Dashboard from './Dashboard';
 import authProvider from "./authProvider";
-import dataProvider from "./dataProvider";
+// import dataProvider from "./dataProvider";
+import jsonServerProvider from 'ra-data-json-server';
 
-// 커밋 설정이 잘 된건가 모르겠네요 ?
+const dataProvider=jsonServerProvider('https://jsonplaceholder.typicode.com');
+
 const App=()=>(
     <Admin dashboard={Dashboard} authProvider={authProvider} dataProvider={dataProvider}>
         <Resource name="posts" list={PostList} edit={PostEdit} create={PostCreate} icon={PostIcon}/>
